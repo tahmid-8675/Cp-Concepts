@@ -1,0 +1,38 @@
+ 
+ int ascii;
+ char ch = static_cast<char>(ascii);
+
+ //factorial
+
+ double res = tgamma(n + 1);//n!
+
+ //
+  string all = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    x = all.substr(0, N);//takes 0 to N
+
+
+//agent in sort
+
+bool cmp(const pair<int,int>&p1,const pair<int,int>&p2){
+
+    if(p1.first>p2.first) return 1;
+
+    else if(p1.first==p2.first) return(p1.second<p2.second);
+
+    return 0;
+
+}
+
+int main() {
+    optimize();
+
+
+vector<pair<int,int>>v={{3,100},{2,50},{4,500},{4,20}};
+
+sort(v.begin(),v.end(),cmp);
+
+for(auto k:v){
+    cout<<k.first<<","<<k.second<<endl;
+}
+
+}
